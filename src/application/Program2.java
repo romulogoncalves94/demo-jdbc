@@ -24,21 +24,21 @@ public class Program2 {
 		
 		System.out.println("\n=== TESTE 3: department update ===");
 		department = departmentDao.findById(7);
-		department.setName("Tonhao das Neves");
+		department.setName("Sales");
 		departmentDao.update(department);
 		System.out.println("Update completed!");
 		
-		System.out.println("\n=== TESTE 4: department deleteById ===");
-		System.out.println("Enter id for delete test: ");
-		int id = sc.nextInt();
-		departmentDao.deleteById(id);
-		System.out.println("Delete completed!");
-		
-		System.out.println("\n=== TESTE 5: department findAll ===");
+		System.out.println("\n=== TESTE 4: department findAll ===");
 		List<Department> list = departmentDao.findAll();
 		for(Department dep : list) {
 			System.out.println(dep);
 		}
+		
+		System.out.println("\n=== TESTE 5: department deleteById ===");
+		System.out.println("Enter id for delete test: ");
+		int id = sc.nextInt();
+		departmentDao.deleteById(id);
+		System.out.println("Delete completed!");
 		
 		sc.close();
 	}
